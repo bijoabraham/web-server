@@ -20,6 +20,14 @@ app.set("view engine","hbs");
 //express middlewear to control express behaviour - here to serve static page from public folder
 app.use(express.static(__dirname+'/public'))
 
+//middleware to intercept req and response
+//the request is allowed to process only when next() is called
+app.use((req,res,next)=>{
+    console.log(`Request :${req.method}, Url:${req.url}`);
+    //if next is not called the server request is hanged
+    next();    
+});
+
 //Code to handle req and response
 app.get("/",(req,res)=>{
     res.send("Hello Word");
