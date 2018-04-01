@@ -6,6 +6,9 @@ const hbs = require("hbs") ;
 //Initialize server app
 app = express();
 
+//partial page renderting inn hbs by specifying partial page dir
+hbs.registerPartials(__dirname+'\\views\\partials')
+
 //set handle bar hbs as view engine
 app.set("view engine","hbs");
 
