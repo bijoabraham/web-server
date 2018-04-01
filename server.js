@@ -9,6 +9,11 @@ app = express();
 //partial page renderting inn hbs by specifying partial page dir
 hbs.registerPartials(__dirname+'\\views\\partials')
 
+//register handlers in handlebar
+hbs.registerHelper("getYear",()=>{
+    return new Date().getFullYear();
+});
+
 //set handle bar hbs as view engine
 app.set("view engine","hbs");
 
