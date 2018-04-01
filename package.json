@@ -1,0 +1,14 @@
+{
+  "name": "webserver-node",
+  "version": "1.0.0",
+  "description": "web server using express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bijo Abraham",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
